@@ -1,0 +1,6 @@
+{
+  "name": "Job1 Construction LLC",
+  "description": "Built With Purpose. Premier residential and commercial construction, kitchen remodeling, and outdoor living in Lansdale, PA.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

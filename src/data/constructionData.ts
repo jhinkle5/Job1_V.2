@@ -1,0 +1,230 @@
+import { ServiceItem, PortfolioProject } from '../types';
+
+export const BUSINESS_INFO = {
+  name: 'Job1 Construction LLC',
+  tagline: 'Built With Purpose.',
+  headline: 'Transforming residential and commercial spaces into functional, beautiful environments with precision, clear communication, and quality craftsmanship.',
+  phone: '267-506-2605',
+  phoneDisplay: '(267) 506-2605',
+  email: 'info@job1-construction.com',
+  address: 'Lansdale, PA 19446',
+  county: 'Montgomery County & Surrounding Greater Philadelphia Areas',
+  license: 'Licensed & Fully Insured Contractor',
+  hours: 'Monday – Friday: 7:00 AM – 6:00 PM | Saturday: 8:00 AM – 2:00 PM',
+};
+
+export const CORE_SERVICES: ServiceItem[] = [
+  {
+    id: 'residential',
+    title: 'Residential Construction',
+    tagline: 'Custom additions, whole-home renovations & structural upgrades',
+    description: 'Transforming existing residential footprints into spacious, functional modern homes. From multi-room second-story additions to load-bearing wall removals and high-performance window/door replacements, we handle every phase from foundation to finish.',
+    highlights: [
+      'Multi-story custom additions & master suites',
+      'Whole-home interior & exterior renovations',
+      'Structural wall reconfigurations & open floor plans',
+      'High-performance window & entry door installations',
+    ],
+    features: [
+      { name: 'Additions', description: 'Seamless architectural integration matching your existing home structure' },
+      { name: 'Home Renovations', description: 'Full interior overhauls with high-efficiency mechanicals and finishes' },
+      { name: 'Window/Door Upgrades', description: 'Energy-rated architectural windows and custom entry assemblies' },
+    ],
+    specBadge: 'Full Architectural Scope',
+    iconName: 'Home',
+  },
+  {
+    id: 'commercial',
+    title: 'Commercial Construction',
+    tagline: 'Structural exterior framing, tenant build-outs & commercial remodels',
+    description: 'Delivering rigid commercial standards with strict adherence to local building codes, life safety regulations, and tight milestone schedules. We execute commercial framing, custom tenant fit-outs, corporate offices, medical suites, and retail upgrades.',
+    highlights: [
+      'Heavy-gauge metal framing & structural exterior assemblies',
+      'Turnkey custom tenant fit-outs for retail, office & medical',
+      'ADA-compliant bathrooms, entries & commercial egresses',
+      'Commercial acoustics, drywall finishing & fire-rated assemblies',
+    ],
+    features: [
+      { name: 'Exterior Framing', description: 'Engineered structural steel and heavy timber framing' },
+      { name: 'Tenant Fit-Outs', description: 'Custom interior configurations built to brand specifications' },
+      { name: 'Commercial Renovations', description: 'Phased renovation minimizing tenant and business downtime' },
+    ],
+    specBadge: 'Code & Safety Compliant',
+    iconName: 'Building2',
+  },
+  {
+    id: 'kitchen',
+    title: 'Kitchen Remodeling',
+    tagline: 'Modern, functional kitchen and bath renovations built for living',
+    description: 'The kitchen is the command center of the home. We design and build culinary-grade kitchens featuring custom cabinetry, waterfall quartz and granite countertops, gourmet range hoods, walk-in pantries, and architectural task lighting.',
+    highlights: [
+      'Custom cabinet fabrication & soft-close European hardware',
+      'Quartz, granite & quartzite countertop fabrication & install',
+      'Chef-grade appliance integration & dedicated circuit wiring',
+      'Luxury tile backsplashes, heated flooring & under-cabinet LED runs',
+    ],
+    features: [
+      { name: 'Cabinetry & Storage', description: 'Custom floor-to-ceiling cabinetry and hidden pantry pullouts' },
+      { name: 'Countertops & Islands', description: 'Oversized prep islands with integrated sink and beverage stations' },
+      { name: 'Lighting & Finishes', description: 'Layered architectural lighting and designer plumbing fixtures' },
+    ],
+    specBadge: 'Premium Custom Finishes',
+    iconName: 'Utensils',
+  },
+  {
+    id: 'outdoor',
+    title: 'Outdoor Living',
+    tagline: 'Decks, patios & durable weather-tested exterior upgrades',
+    description: 'Elevate your outdoor lifestyle with durable, low-maintenance living environments. We engineer custom composite multi-level decks, covered pavilions, custom cedar pergolas, stone paver patios, outdoor kitchens, and modern aluminum rail systems.',
+    highlights: [
+      'Low-maintenance composite decking (Trex, TimberTech)',
+      'Custom timber pergolas, pavilions & screened porches',
+      'Interlocking stone paver patios & exterior retaining walls',
+      'Integrated low-voltage stair risers & post cap illumination',
+    ],
+    features: [
+      { name: 'Decks', description: 'Multi-tiered composite decks with hidden fastener systems' },
+      { name: 'Patios', description: 'Excavated, compacted stone and paver hardscapes' },
+      { name: 'Exterior Upgrades', description: 'Soffit, fascia, composite siding and weatherization' },
+    ],
+    specBadge: 'Engineered For Pennsylvania Weather',
+    iconName: 'Trees',
+  },
+];
+
+export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
+  {
+    id: 'kitchen-remodel-main-st',
+    category: 'Kitchen Renovation',
+    title: 'Modern Chef Kitchen & Island Expansion',
+    location: 'Lansdale, PA',
+    completedYear: '2025',
+    duration: '5 Weeks',
+    description: 'A complete gut renovation of an outdated 1990s kitchen. We removed a dividing load-bearing partition, installed an engineered LVL beam, and built an expansive 10-foot waterfall quartz island with custom navy and white soft-close shaker cabinetry.',
+    scope: [
+      'Structural load-bearing wall removal & LVL beam installation',
+      'Custom solid maple two-tone shaker cabinetry with brass pulls',
+      'Calacatta quartz waterfall edge island with counter seating',
+      'Subway tile herringbone backsplash with contrasting grout',
+      'Dedicated 50A cooktop sub-panel & layered dimmable LED lighting',
+    ],
+    materials: ['Calacatta Gold Quartz', 'Solid Maple Shaker Cabinets', 'Brass Hardware', 'White Oak Flooring'],
+    highlightMetric: 'Expanded usable counter space by +85%',
+    specs: [
+      { label: 'Footprint', value: '380 sq ft' },
+      { label: 'Cabinetry', value: 'Custom 42" Upper Cabinets' },
+      { label: 'Island Dimensions', value: '10\' x 4.5\'' },
+      { label: 'Turnaround', value: '5 Weeks On Schedule' },
+    ],
+  },
+  {
+    id: 'commercial-tech-center',
+    category: 'Commercial Projects',
+    title: 'Commercial Medical Suite & Tenant Fit-Out',
+    location: 'North Wales, PA',
+    completedYear: '2025',
+    duration: '8 Weeks',
+    description: 'Turnkey interior tenant fit-out for a multidisciplinary medical wellness practice. Scope included commercial light-gauge metal stud framing, acoustic drywall STC-55 rating for patient privacy, commercial LVT flooring, and ADA-compliant reception and restrooms.',
+    scope: [
+      'Structural light-gauge steel exterior and interior partition framing',
+      'Acoustic insulation & Sound Transmission Class STC-55 wall assemblies',
+      'Commercial grade solid-core fire-rated doors and architectural hardware',
+      'Complete ADA restroom build-out and reception millwork integration',
+      'Full coordination with Montgomery County township code inspectors',
+    ],
+    materials: ['Heavy-Gauge Steel Framing', 'Acoustic Sound Barrier Drywall', 'Commercial LVT', 'Brushed Aluminum Trims'],
+    highlightMetric: 'Zero inspection deficiencies on initial code review',
+    specs: [
+      { label: 'Commercial Area', value: '2,800 sq ft' },
+      { label: 'Partitions', value: 'Steel Framing STC 55' },
+      { label: 'Inspection Pass', value: '100% First Inspection' },
+      { label: 'Compliance', value: 'ADA & PA Commercial Code' },
+    ],
+  },
+  {
+    id: 'outdoor-deck-sanctuary',
+    category: 'Decks & Exterior',
+    title: 'Multi-Tier Composite Deck & Cedar Pergola',
+    location: 'Montgomeryville, PA',
+    completedYear: '2024',
+    duration: '3.5 Weeks',
+    description: 'Engineered outdoor sanctuary replacing an aged pressure-treated wood deck. Built on concrete sonotubes below frost depth, featuring Trex Transcend composite decking in Island Mist with black aluminum balusters, integrated step lighting, and an 14x16 cedar pergola.',
+    scope: [
+      'Demolition of decaying 400 sq ft wood deck and footer re-engineering',
+      'Deep frost-line sonotube footings with Simpson Strong-Tie hardware',
+      'Trex Transcend premium composite boards with hidden fastener clips',
+      'Powder-coated black aluminum railing system with continuous drink rail',
+      'Handcrafted western red cedar pergola with mortise and tenon joinery',
+    ],
+    materials: ['Trex Transcend Composite', 'Western Red Cedar', 'Powder-Coated Aluminum', 'Low-Voltage LED'],
+    highlightMetric: 'Zero maintenance required for 25+ years',
+    specs: [
+      { label: 'Deck Area', value: '640 sq ft (Two Tiers)' },
+      { label: 'Pergola', value: '14\' x 16\' Cedar Frame' },
+      { label: 'Railing', value: 'Black Aluminum 36" Code Compliant' },
+      { label: 'Lighting', value: '18 Integrated Stair & Post Lights' },
+    ],
+  },
+];
+
+export const VALUE_PROPOSITIONS = [
+  {
+    pillar: 'Attention to Detail',
+    title: 'Precision in Every Measurement',
+    description: 'We treat every millimeter with absolute respect. From laser-level framing alignments to immaculate miter joints and clean trim work, our standard is precision that stands up to close inspection.',
+    points: [
+      'Laser-leveled framing and subfloor truing',
+      'Pristine caulk, grout, and paint cutoff lines',
+      'Clean daily site cleanup and air filtration protection',
+      'Milestone quality sign-offs before moving to the next trade',
+    ],
+  },
+  {
+    pillar: 'Clear Communication',
+    title: 'Direct, Honest & Transparent',
+    description: 'Construction stress usually comes from silence. At Job1, you will always know what is happening, who is on site, and what comes next with direct contractor access.',
+    points: [
+      'Direct line to your project lead (no call-center runaround)',
+      'Detailed itemized estimates with clear material specifications',
+      'Weekly written progress reports and upcoming lookaheads',
+      'Upfront discussion of any unforeseen structural surprises',
+    ],
+  },
+  {
+    pillar: 'Quality Craftsmanship',
+    title: 'Built to Endure Decades',
+    description: 'We do not cut corners behind drywall or under floorboards. We utilize verified structural fasteners, proper vapor and flashing barriers, and premium commercial-grade materials.',
+    points: [
+      'Building to exceed minimum building code standards',
+      'Moisture, ice & water barrier systems tailored to PA freeze/thaw',
+      'Premium brand materials with manufacturer warranties',
+      'Vetted master tradespeople with proven track records',
+    ],
+  },
+  {
+    pillar: 'Full Residential & Commercial Capabilities',
+    title: 'One Trusted Partner for Any Scale',
+    description: 'Whether you are a homeowner expanding your family residence or a business owner managing commercial tenant space, Job1 provides turnkey engineering and execution.',
+    points: [
+      'Comprehensive township permitting and inspection coordination',
+      'Flexibility for phased remodeling to keep you operating',
+      'Commercial grade safety standards and comprehensive insurance',
+      'Unified project management from architectural design to handover',
+    ],
+  },
+];
+
+export const SERVICE_AREAS = [
+  'Lansdale',
+  'Montgomeryville',
+  'North Wales',
+  'Hatfield',
+  'Harleysville',
+  'Ambler',
+  'Blue Bell',
+  'Doylestown',
+  'Kulpsville',
+  'Towamencin',
+  'Skippack',
+  'King of Prussia',
+];
