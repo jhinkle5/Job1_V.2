@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, ShieldCheck, MapPin, PhoneCall, Hammer, Award } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/constructionData';
-import heroImage from '../Screenshot from 2026-10-24 20-33-09.png';
+import heroImage from '../../Bobby.png';
 
 interface HeroProps {
   onRequestEstimate: () => void;
@@ -77,7 +77,7 @@ export const Hero: React.FC<HeroProps> = ({ onRequestEstimate, onExploreServices
 
               <button
                 onClick={onExploreServices}
-                className="px-6 py-4 text-base font-semibold text-white bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 active:scale-[0.98] transition-all rounded-lg"
+                className="px-6 py-4 text-base font-semibold text-white bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 active:scale-[0.98] transition-all rounded-lg shadow-lg shadow-black/10 flex items-center justify-center"
                 aria-label="Explore Our Services"
               >
                 <span>Explore Our Services</span>
