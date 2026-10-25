@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, ShieldCheck, MapPin, PhoneCall, Hammer, Award } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/constructionData';
+import heroImage from '../Screenshot from 2026-10-24 20-33-09.png';
 
 interface HeroProps {
   onRequestEstimate: () => void;
@@ -11,7 +12,7 @@ export const Hero: React.FC<HeroProps> = ({ onRequestEstimate, onExploreServices
   return (
     <section id="home" className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-slate-950">
       {/* Background Architectural Grid Pattern */}
-      <div 
+      <div
         className="absolute inset-0 opacity-[0.07] pointer-events-none"
         style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, #f59e0b 1px, transparent 0)`,
@@ -21,21 +22,30 @@ export const Hero: React.FC<HeroProps> = ({ onRequestEstimate, onExploreServices
       />
 
       {/* Subtle Ambient Radial Glow */}
-      <div 
-        className="absolute top-1/4 -right-40 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" 
-        aria-hidden="true" 
+      <div
+        className="absolute top-1/4 -right-40 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"
+        aria-hidden="true"
       />
-      <div 
-        className="absolute bottom-0 -left-40 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" 
-        aria-hidden="true" 
+      <div
+        className="absolute bottom-0 -left-40 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"
+        aria-hidden="true"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
-          {/* Left Column: Headlines & Call to Actions */}
-          <div className="lg:col-span-7 space-y-6">
-            
+        <div className="grid grid-cols-1 xl:grid-cols-[1.05fr_1.35fr_1.1fr] gap-6 lg:gap-8 items-center">
+          {/* Left Column: Project Image */}
+          <div className="order-2 xl:order-1">
+            <div className="overflow-hidden rounded-[28px] border border-slate-800 bg-slate-900/60 shadow-2xl shadow-black/30">
+              <img
+                src={heroImage}
+                alt="Job1 Construction project preview"
+                className="block w-full h-auto object-cover rounded-[28px]"
+              />
+            </div>
+          </div>
+
+          {/* Middle Column: Headlines & Call to Actions */}
+          <div className="order-1 xl:order-2 space-y-5 lg:space-y-6">
             {/* Location & Credential Tag */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-slate-900 border border-slate-800 text-xs font-semibold text-slate-300">
               <MapPin className="w-3.5 h-3.5 text-amber-500 shrink-0" />
@@ -45,12 +55,12 @@ export const Hero: React.FC<HeroProps> = ({ onRequestEstimate, onExploreServices
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white text-balance leading-[1.08]">
+            <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-white text-balance leading-[1.08]">
               {BUSINESS_INFO.tagline}
             </h1>
 
             {/* Subheadline (Exact text from user brief) */}
-            <p className="text-lg sm:text-xl text-slate-300 max-w-2xl font-normal leading-relaxed text-balance">
+            <p className="text-lg sm:text-xl text-slate-300 max-w-xl font-normal leading-relaxed text-balance">
               {BUSINESS_INFO.headline}
             </p>
 
@@ -58,7 +68,8 @@ export const Hero: React.FC<HeroProps> = ({ onRequestEstimate, onExploreServices
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
               <button
                 onClick={onRequestEstimate}
-                className="px-7 py-4 text-base font-bold text-slate-950 bg-amber-500 hover:bg-amber-400 active:scale-[0.98] transition-all rounded-lg shadow-xl shadow-amber-500/20 flex items-center justify-center gap-3 group"
+                className="group px-7 py-4 text-base font-bold text-slate-950 bg-amber-500 hover:bg-amber-400 active:scale-[0.98] transition-all rounded-lg shadow-xl shadow-amber-500/20 flex items-center justify-center gap-2"
+                aria-label="Request Free Estimate"
               >
                 <span>Request Free Estimate</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -66,7 +77,8 @@ export const Hero: React.FC<HeroProps> = ({ onRequestEstimate, onExploreServices
 
               <button
                 onClick={onExploreServices}
-                className="px-6 py-4 text-base font-semibold text-white bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 active:scale-[0.98] transition-all rounded-lg flex items-center justify-center gap-2"
+                className="px-6 py-4 text-base font-semibold text-white bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 active:scale-[0.98] transition-all rounded-lg"
+                aria-label="Explore Our Services"
               >
                 <span>Explore Our Services</span>
               </button>
@@ -87,13 +99,11 @@ export const Hero: React.FC<HeroProps> = ({ onRequestEstimate, onExploreServices
                 <span className="text-slate-300 font-medium">Direct Master Craftsmanship</span>
               </div>
             </div>
-
           </div>
 
           {/* Right Column: Architectural Visual Card & Live Project Metric Canvas */}
-          <div className="lg:col-span-5">
+          <div className="order-3 xl:order-3">
             <div className="relative rounded-2xl bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 p-6 sm:p-8 shadow-2xl shadow-black/50 overflow-hidden">
-              
               {/* Construction Blueprint Header Graphic */}
               <div className="flex items-center justify-between pb-6 border-b border-slate-800">
                 <div>
@@ -161,9 +171,7 @@ export const Hero: React.FC<HeroProps> = ({ onRequestEstimate, onExploreServices
 
               {/* Instant Call Prompt */}
               <div className="mt-5 p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-between">
-                <div className="text-xs text-amber-200">
-                  Ready to discuss your project scope?
-                </div>
+                <div className="text-xs text-amber-200">Ready to discuss your project scope?</div>
                 <button
                   onClick={onRequestEstimate}
                   className="text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1 underline underline-offset-2"
@@ -171,10 +179,8 @@ export const Hero: React.FC<HeroProps> = ({ onRequestEstimate, onExploreServices
                   Start Estimate
                 </button>
               </div>
-
             </div>
           </div>
-
         </div>
       </div>
     </section>
